@@ -1,0 +1,266 @@
+/* Custom styles for the app */
+.stApp {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+/* Background image and overlay */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="trees" patternUnits="userSpaceOnUse" width="50" height="50"><path d="M25,5 L40,35 L10,35 Z" fill="%232E7D32" opacity="0.1"/><path d="M25,15 L35,35 L15,35 Z" fill="%231B5E20" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23trees)"/></svg>');
+    background-repeat: repeat;
+    opacity: 1;
+    z-index: -1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(232, 245, 233, 0.7));
+    padding: 20px;
+}
+
+/* Header styling */
+.main-header {
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.95) 0%, rgba(46, 125, 50, 0.95) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 100 100"><path d="M50,20 L70,60 L30,60 Z" fill="white" opacity="0.1"/></svg>');
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-content p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Sidebar styling */
+.sidebar-header {
+    background: linear-gradient(to bottom, rgba(46, 125, 50, 0.95), rgba(27, 94, 32, 0.95)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white" opacity="0.1"/></svg>');
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sidebar-info {
+    background: rgba(46, 125, 50, 0.15);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.sidebar-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar-info li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.sidebar-info li:before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+}
+
+/* Chart containers */
+.chart-container, .map-container, .analysis-container {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.chart-container:hover,
+.map-container:hover,
+.analysis-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Stat boxes */
+.stat-box {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+    padding: 1.8rem;
+    border-radius: 15px;
+    border-left: 4px solid #2E7D32;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.stat-box.warning {
+    border-left-color: #C62828;
+}
+
+.stat-box h3 {
+    color: #1B5E20;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.stat-box h2 {
+    color: #2E7D32;
+    font-size: 2.2rem;
+    margin: 0.8rem 0;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Landing page styling */
+.landing-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50,20 L65,50 L35,50 Z" fill="%232E7D32" opacity="0.1"/></svg>') repeat;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-top: 4px solid #2E7D32;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    color: #2E7D32;
+    margin-bottom: 1rem;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(232, 245, 233, 0.95) 0%, rgba(200, 230, 201, 0.95) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,80 C40,70 60,90 80,80" stroke="%232E7D32" fill="none" stroke-width="2" opacity="0.2"/></svg>') repeat;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* Button styling */
+.stButton>button {
+    background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+    background: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    padding: 0 20px;
+    background-color: rgba(46, 125, 50, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
+    background-color: rgba(46, 125, 50, 0.9);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Map improvements */
+.map-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-header h2 {
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+}
+
+.map-header p {
+    color: #666;
+}
+
+.folium-map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .stat-box {
+        margin-bottom: 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
